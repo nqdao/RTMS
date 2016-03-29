@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.omnetpp.common.image.ImageSelectionDialog">
+		<item value="569" key="DIALOG_WIDTH"/>
+		<item value="-66" key="DIALOG_Y_ORIGIN"/>
+		<item value="584" key="DIALOG_HEIGHT"/>
+		<item value="8" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="TemplateBasedWizard">
+		<item value="bundleentry://281.fwk17589378/template/emptyproject/" key="project.template"/>
+		<item value="bundleentry://295.fwk17589378/templates/emptynetwork/" key="network.template"/>
+		<item value="bundleentry://295.fwk17589378/templates/emptysimplemodule/" key="simplemodule.template"/>
+	</section>
+</section>

@@ -15,21 +15,25 @@
 
 package rtms;
 import inet.applications.generic.IIPvXTrafficGenerator;
+import inet.applications.udpapp.UDPBasicApp;
 import inet.applications.udpapp.UDPBasicBurst;
 import inet.applications.udpapp.UDPEchoApp;
 import inet.applications.udpapp.UDPSink;
 import inet.applications.voip.SimpleVoIPReceiver;
 import inet.applications.voip.SimpleVoIPSender;
 import inet.examples.adhoc.hostautoconf.Host;
-import inet.examples.wireless.testnewmac.ThroughputServer;
 import inet.linklayer.contract.IWirelessNic;
 import inet.linklayer.ieee80211.Ieee80211Nic;
 import inet.linklayer.ieee80211.mac.Ieee80211Mac;
 import inet.linklayer.ieee802154.Ieee802154NarrowbandNic;
 import inet.linklayer.lmac.LMacLayer;
 import inet.networklayer.configurator.ipv4.HostAutoConfigurator;
+import inet.networklayer.multi.MultiNetworkLayer;
+import inet.node.ethernet.EtherHost;
 import inet.node.inet.StandardHost;
+import inet.node.inet.WirelessHost;
 import inet.node.wireless.AccessPoint;
+import inet.transportlayer.udp.UDP;
 
 
 //
@@ -39,44 +43,57 @@ network wireless
 {
     @display("bgb=1125,556");
     submodules:
-        premium_sta: Host {
-            @display("p=814,71");
-        }
-        standard_sta: Host {
-            @display("p=814,207");
-        }
-        lowpower_sta: Host {
-            @display("p=814,337");
-        }
-        hostAutoConfigurator: HostAutoConfigurator {
-            @display("p=84,25");
-        }
         high_throughput_nic: Ieee80211Nic {
-            @display("p=393,110");
+            @display("p=517,110");
         }
         low_throughput_nic: Ieee80211Nic {
-            @display("p=393,310");
+            @display("p=517,300");
         }
         controller: Controller {
-            @display("p=234,215");
+            @display("p=371,215");
         }
         simpleVoIPSender: SimpleVoIPSender {
-            @display("p=84,168");
+            @display("p=84,110");
         }
         simpleVoIPReceiver: SimpleVoIPReceiver {
             @display("p=972,71");
         }
         udpBasicBurst: UDPBasicBurst {
-            @display("p=81,257");
+            @display("p=84,215");
         }
         udpEchoApp: UDPEchoApp {
             @display("p=972,337");
         }
-        udpSink: UDPSink {
-            @display("p=972,215");
+        udpBasicBurst1: UDPBasicBurst {
+            @display("p=972,207");
+        }
+        udp: UDP {
+            @display("p=166,215");
+        }
+        multiNetworkLayer: MultiNetworkLayer {
+            @display("p=266,215");
+        }
+        premium_client: Host {
+            @display("p=819,71");
+        }
+        standard_client: Host {
+            @display("p=819,207");
+        }
+        lowpower_sensor: Host {
+            @display("p=819,337");
         }
     connections:
         controller.out++ --> high_throughput_nic.upperLayerIn;
         controller.out++ --> low_throughput_nic.upperLayerIn;
+        udpBasicBurst.udpOut --> udp.appIn++;
+        udp.ipOut --> multiNetworkLayer.transportIn++;
+        multiNetworkLayer.ifOut++ --> controller.in++;
+        simpleVoIPSender.udpOut --> controller.in++;
+        controller.out++ --> simpleVoIPSender.udpIn;
+        high_throughput_nic.upperLayerOut --> controller.in++;
+        low_throughput_nic.upperLayerOut --> controller.in++;
+        controller.out++ --> multiNetworkLayer.ifIn++;
+        multiNetworkLayer.transportOut++ --> udp.ipIn;
+        udp.appOut++ --> udpBasicBurst.udpIn;
 }
 

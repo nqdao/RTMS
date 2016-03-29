@@ -1,0 +1,88 @@
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+
+package rtms;
+import inet.applications.generic.IIPvXTrafficGenerator;
+import inet.applications.udpapp.UDPBasicApp;
+import inet.applications.udpapp.UDPBasicBurst;
+import inet.applications.udpapp.UDPEchoApp;
+import inet.applications.udpapp.UDPSink;
+import inet.applications.voip.SimpleVoIPReceiver;
+import inet.applications.voip.SimpleVoIPSender;
+import inet.examples.adhoc.hostautoconf.Host;
+import inet.examples.emulation.extserver.NormalPath;
+import inet.linklayer.contract.IWirelessNic;
+import inet.linklayer.ieee80211.Ieee80211Nic;
+import inet.linklayer.ieee80211.mac.Ieee80211Mac;
+import inet.linklayer.ieee802154.Ieee802154NarrowbandNic;
+import inet.linklayer.lmac.LMacLayer;
+import inet.networklayer.configurator.ipv4.HostAutoConfigurator;
+import inet.networklayer.multi.MultiNetworkLayer;
+import inet.node.inet.StandardHost;
+import inet.node.inet.WirelessHost;
+import inet.node.wireless.AccessPoint;
+import inet.transportlayer.udp.UDP;
+
+
+//
+// TODO documentation
+//
+network wireless
+{
+    @display("bgb=1125,556");
+    submodules:
+        hostAutoConfigurator: HostAutoConfigurator {
+            @display("p=84,25");
+        }
+        high_throughput_nic: Ieee80211Nic {
+            @display("p=517,110");
+        }
+        low_throughput_nic: Ieee80211Nic {
+            @display("p=517,300");
+        }
+        controller: Controller {
+            @display("p=371,215");
+        }
+        simpleVoIPSender: SimpleVoIPSender {
+            @display("p=84,110");
+        }
+        simpleVoIPReceiver: SimpleVoIPReceiver {
+            @display("p=972,71");
+        }
+        udpBasicBurst: UDPBasicBurst {
+            @display("p=84,215");
+        }
+        udpEchoApp: UDPEchoApp {
+            @display("p=972,337");
+        }
+        udpBasicBurst1: UDPBasicBurst {
+            @display("p=972,207");
+        }
+        wirelessHost: WirelessHost {
+            @display("p=816,82");
+        }
+        udp: UDP {
+            @display("p=184,215");
+        }
+        multiNetworkLayer: MultiNetworkLayer {
+            @display("p=265,215");
+        }
+    connections:
+        controller.out++ --> high_throughput_nic.upperLayerIn;
+        controller.out++ --> low_throughput_nic.upperLayerIn;
+        udpBasicBurst.udpOut --> udp.appIn++;
+        udp.ipOut --> multiNetworkLayer.transportIn++;
+}
+

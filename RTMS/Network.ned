@@ -15,16 +15,33 @@
 
 package rtms;
 
+import inet.applications.ethernet.EtherAppCli;
+import inet.applications.ethernet.EtherAppSrv;
+import inet.linklayer.ethernet.EtherLLC;
+import inet.linklayer.ieee80211.Ieee80211Nic;
+import inet.node.ethernet.EtherHost;
+import inet.node.wireless.AccessPoint;
+
+
 network Network
 {
+    @display("bgb=569,302");
     submodules:
-        node1: Node {
-            @display("p=78,66");
+        etherAppCli: EtherAppCli {
+            @display("p=94,93");
         }
-        node2: Node {
-            @display("p=314,66");
+        etherAppSrv: EtherAppSrv {
+            @display("p=521,93");
+        }
+        ieee80211Nic: Ieee80211Nic {
+            @display("p=195,93");
+        }
+        ieee80211Nic1: Ieee80211Nic {
+            @display("p=400,93");
         }
     connections:
-        node1.out --> node2.in;
-        node2.out --> node1.in;
+        etherAppCli.out --> ieee80211Nic.upperLayerIn;
+        etherAppSrv.out --> ieee80211Nic1.upperLayerIn;
+        ieee80211Nic1.upperLayerOut --> etherAppSrv.in;
+        ieee80211Nic.upperLayerOut --> etherAppCli.in;
 }

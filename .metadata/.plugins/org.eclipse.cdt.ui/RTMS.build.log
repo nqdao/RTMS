@@ -1,0 +1,8 @@
+17:09:17 **** Build of configuration gcc-debug for project RTMS ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+Controller.cc
+Node.cc
+Creating executable: out/gcc-debug//RTMS.exe
+
+17:09:21 Build Finished (took 3s.242ms)
+

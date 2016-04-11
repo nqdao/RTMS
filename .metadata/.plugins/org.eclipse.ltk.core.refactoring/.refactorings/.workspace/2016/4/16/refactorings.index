@@ -20,3 +20,6 @@
 1460359863693	Delete resource 'inet'
 1460361004008	Delete resource 'inet'
 1460361958516	Delete resource 'inet'
+1460405452451	Delete resource 'inet/examples/wireless/qos/MacEdca.anf'
+1460408562872	Delete resource 'RTMS/results'
+1460408589477	Delete resource 'RTMS/Node.ned'

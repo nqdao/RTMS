@@ -1,0 +1,146 @@
+version 2
+run General-0-20160411-16:32:57-7836
+attr configname General
+attr datetime 20160411-16:32:57
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Throughput
+attr processid 7836
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 11  Throughput.PremiumUser[0].wlan.mac.ctn[0]  state:vector  ETV
+attr interpolationmode  none
+attr source  stateChanged
+attr title  "contention state, vector"
+vector 23  Throughput.ap.wlan.mac.ctn[0]  state:vector  ETV
+attr interpolationmode  none
+attr source  stateChanged
+attr title  "contention state, vector"
+vector 7  Throughput.PremiumUser[0].wlan.radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 10  Throughput.PremiumUser[0].wlan.radio  radioChannel:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, vector"
+vector 19  Throughput.ap.wlan.radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 22  Throughput.ap.wlan.radio  radioChannel:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, vector"
+vector 8  Throughput.PremiumUser[0].wlan.radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 20  Throughput.ap.wlan.radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 1  Throughput.PremiumUser[0].cli  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 5  Throughput.PremiumUser[0].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 4  Throughput.PremiumUser[0].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 9  Throughput.PremiumUser[0].wlan.radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 18  Throughput.ap.wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 15  Throughput.ap.wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+1	1	0.0005	1000
+1	9	0.001	1000
+1	12	0.0015	1000
+1	15	0.002	1000
+1	18	0.0025	1000
+1	21	0.003	1000
+1	24	0.0035	1000
+1	27	0.004	1000
+1	30	0.0045	1000
+1	33	0.005	1000
+1	36	0.0055	1000
+1	39	0.006	1000
+1	42	0.0065	1000
+1	45	0.007	1000
+1	48	0.0075	1000
+1	51	0.008	1000
+1	54	0.0085	1000
+4	5	0.0005	1036
+5	3	0.0005	1036
+5	11	0.001	1036
+5	14	0.0015	1036
+5	17	0.002	1036
+5	20	0.0025	1036
+5	23	0.003	1036
+5	26	0.0035	1036
+5	29	0.004	1036
+5	32	0.0045	1036
+5	35	0.005	1036
+5	38	0.0055	1036
+5	41	0.006	1036
+5	44	0.0065	1036
+5	47	0.007	1036
+5	50	0.0075	1036
+5	53	0.008	1036
+5	56	0.0085	1036
+7	0	0	0
+7	0	0	2
+7	6	0.0005	3
+7	58	0.00898	2
+8	0	0	1
+8	6	0.0005	0
+8	58	0.00898	1
+9	6	0.0005	1
+9	7	0.0005	2
+9	57	0.00898	1
+9	58	0.00898	0
+10	0	0	0
+11	0	0	0
+11	0	0	0
+11	0	0	0
+11	0	0	0
+11	3	0.0005	0
+11	3	0.0005	2
+11	4	0.0005	2
+11	4	0.0005	3
+11	6	0.0005	3
+11	6	0.0005	3
+15	60	0.008980762899	1036
+18	60	0.008980762899	1036
+19	0	0	0
+19	0	0	2
+20	0	0	1
+20	8	0.000500762899	3
+20	59	0.008980762899	1
+22	0	0	0
+23	0	0	0
+23	0	0	0
+23	0	0	0
+23	0	0	0
+23	8	0.000500762899	0
+23	8	0.000500762899	0
+23	59	0.008980762899	0
+23	59	0.008980762899	0

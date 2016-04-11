@@ -1,0 +1,124 @@
+file 57750 1460408321                                           
+version 2
+run Throughput1-0-20160411-16:54:01-11212
+attr configname Throughput1
+attr datetime 20160411-16:54:01
+attr experiment Throughput1
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Throughput
+attr processid 11212
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 11  Throughput.PremiumUser[0].wlan.mac.ctn[0]  state:vector  ETV
+attr interpolationmode  none
+attr source  stateChanged
+attr title  "contention state, vector"
+vector 23  Throughput.ap.wlan.mac.ctn[0]  state:vector  ETV
+attr interpolationmode  none
+attr source  stateChanged
+attr title  "contention state, vector"
+vector 7  Throughput.PremiumUser[0].wlan.radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 10  Throughput.PremiumUser[0].wlan.radio  radioChannel:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, vector"
+vector 19  Throughput.ap.wlan.radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 22  Throughput.ap.wlan.radio  radioChannel:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, vector"
+vector 8  Throughput.PremiumUser[0].wlan.radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 20  Throughput.ap.wlan.radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 1  Throughput.PremiumUser[0].cli  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 5  Throughput.PremiumUser[0].wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 4  Throughput.PremiumUser[0].wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 9  Throughput.PremiumUser[0].wlan.radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 18  Throughput.ap.wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 15  Throughput.ap.wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 12  Throughput.ap.srv  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 14  Throughput.ap.srv  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 13  Throughput.ap.srv  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 17  Throughput.ap.wlan.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 16  Throughput.ap.wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 21  Throughput.ap.wlan.radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 6  Throughput.PremiumUser[0].wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+1	4344 5825 1 1790 0.001 0.319 319 1000 1000 319000 319000000
+4	10169 861 5 1813 0.001 0.319947299738 32 1036 1036 33152 34345472
+5	11030 5827 3 1792 0.001 0.319 319 1036 1036 330484 342381424
+6	16857 891 51 1811 0.009795525798 0.319417299738 35 14 1036 4578 4299260
+7	17748 1528 0 1814 0 0.319947299738 65 0 3 160 416
+8	19276 3215 0 1814 0 0.319947299738 134 0 3 172 382
+9	22491 3020 6 1815 0.001 0.319947299738 126 0 2 127 191
+10	25511 10 0 0 0 0 1 0 0 0 0
+11	25521 8754 0 1814 0 0.319947299738 352 0 3 743 2037
+12	34275 882 38 1798 0.009480762899 0.319102536839 31 1000 1000 31000 31000000
+13	35157 851 38 1798 0.009480762899 0.319102536839 31 500 500 15500 7750000
+14	36008 1192 38 1798 0.009480762899 0.319102536839 31 0.008480762899 0.157495649869 3.640593145939 0.48474397674015
+15	37200 882 36 1796 0.009480762899 0.319102536839 31 1036 1036 32116 33272176
+16	38082 932 42 1802 0.009490762899 0.319112536839 35 14 1036 4578 4299260
+17	39014 1733 39 1801 0.009480762899 0.319102536839 62 536 1036 48732 42178352
+18	40747 882 36 1796 0.009480762899 0.319102536839 31 1036 1036 32116 33272176
+19	41629 1798 0 1809 0 0.319416536839 72 0 3 177 459
+20	43427 3363 0 1809 0 0.319416536839 133 0 3 160 346
+21	46790 3556 43 1809 0.009490762899 0.319416536839 140 0 2 140 210
+22	50346 10 0 0 0 0 1 0 0 0 0
+23	50356 7394 0 1809 0 0.319416536839 294 0 3 440 798

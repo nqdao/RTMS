@@ -14,7 +14,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Iresults
+INCLUDE_PATH = -I. -Irtms -Irtms/results -Itestarea -Itestarea/results
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -29,7 +29,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/Controller.o $O/Node.o
+OBJS = $O/rtms/Controller.o
 
 # Message files
 MSGFILES =
@@ -109,18 +109,19 @@ clean:
 	$(Q)-rm -rf $O
 	$(Q)-rm -f RTMS RTMS.exe libRTMS.so libRTMS.a libRTMS.dll libRTMS.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
-	$(Q)-rm -f results/*_m.cc results/*_m.h
+	$(Q)-rm -f rtms/*_m.cc rtms/*_m.h
+	$(Q)-rm -f rtms/results/*_m.cc rtms/results/*_m.h
+	$(Q)-rm -f testarea/*_m.cc testarea/*_m.h
+	$(Q)-rm -f testarea/results/*_m.cc testarea/results/*_m.h
 
 cleanall: clean
 	$(Q)-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc rtms/*.cc rtms/results/*.cc testarea/*.cc testarea/results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-$O/Controller.o: Controller.cc \
-	Controller.h
-$O/Node.o: Node.cc \
-	Node.h
+$O/rtms/Controller.o: rtms/Controller.cc \
+	rtms/Controller.h
 

@@ -228,7 +228,7 @@
 <includePath path="C:\Users\james\Git\RTMS\inet\src\inet\applications\contract" removed="true"/>
 <includePath path="C:\Users\james\Git\RTMS\inet\src\inet\applications\base" removed="true"/>
 <includePath path="C:\Users\james\Git\610\RTMS\RTMS"/>
-<includePath path="C:\Users\james\Git\610\RTMS\RTMS\results"/>
+<includePath path="C:\Users\james\Git\610\RTMS\RTMS\results" removed="true"/>
 <includePath path="C:\Users\james\Git\610\RTMS\inet\src"/>
 <includePath path="C:\Users\james\Git\610\RTMS\inet\src\inet"/>
 <includePath path="C:\Users\james\Git\610\RTMS\inet\src\inet\transportlayer"/>
@@ -444,6 +444,10 @@
 <includePath path="C:\Users\james\Git\610\RTMS\inet\src\inet\applications\dhcp"/>
 <includePath path="C:\Users\james\Git\610\RTMS\inet\src\inet\applications\contract"/>
 <includePath path="C:\Users\james\Git\610\RTMS\inet\src\inet\applications\base"/>
+<includePath path="C:\Users\james\Git\610\RTMS\RTMS\testarea"/>
+<includePath path="C:\Users\james\Git\610\RTMS\RTMS\testarea\results"/>
+<includePath path="C:\Users\james\Git\610\RTMS\RTMS\rtms"/>
+<includePath path="C:\Users\james\Git\610\RTMS\RTMS\rtms\results"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>

@@ -1,0 +1,52 @@
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+
+package rtms.rtms;
+import inet.applications.ethernet.EtherAppCli;
+import inet.linklayer.ieee80211.Ieee80211Nic;
+import inet.mobility.static.StationaryMobility;
+
+
+//
+// TODO documentation
+//
+module RtmsAP
+{
+    parameters:
+        @networkNode();
+        @labels(node);
+        @display("i=device/accesspoint");
+        *.interfaceTableModule = default("");
+    gates:
+        input radioIn @directIn;
+    submodules:
+        wlan: Ieee80211Nic {
+            parameters:
+                @display("p=89,225;q=queue");
+                mgmtType = default("Ieee80211MgmtAPSimplified");
+                mgmt.encapDecap = "true";
+        }
+        mobility: StationaryMobility {
+            parameters:
+                @display("p=71,121");
+        }
+        cli: EtherAppCli {
+            @display("p=180,138");
+        }
+    connections allowunconnected:
+        radioIn --> { @display("m=s"); } --> wlan.radioIn;
+        cli.out --> wlan.upperLayerIn;
+}
+

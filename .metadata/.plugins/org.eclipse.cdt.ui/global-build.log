@@ -1008,3 +1008,64 @@ make[1]: Entering directory '/c/Users/james/Git/610/RTMS/inet/src'
 make[1]: Leaving directory '/c/Users/james/Git/610/RTMS/inet/src'
 16:53:56 **** Incremental Build of configuration gcc-debug for project RTMS ****
 make MODE=debug CONFIGNAME=gcc-debug all 
+17:44:23 **** Incremental Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/james/Git/610/RTMS/inet/src'
+make[1]: Leaving directory '/c/Users/james/Git/610/RTMS/inet/src'
+17:44:25 **** Incremental Build of configuration gcc-debug for project RTMS ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+Node.cc
+rtms/Controller.cc
+Creating executable: out/gcc-debug//RTMS.exe
+17:51:59 **** Incremental Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/james/Git/610/RTMS/inet/src'
+make[1]: Leaving directory '/c/Users/james/Git/610/RTMS/inet/src'
+17:52:01 **** Incremental Build of configuration gcc-debug for project RTMS ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+17:52:03 **** Incremental Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/james/Git/610/RTMS/inet/src'
+make[1]: Leaving directory '/c/Users/james/Git/610/RTMS/inet/src'
+17:52:06 **** Incremental Build of configuration gcc-debug for project RTMS ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+18:15:53 **** Incremental Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/james/Git/610/RTMS/inet/src'
+make[1]: Leaving directory '/c/Users/james/Git/610/RTMS/inet/src'
+18:15:55 **** Incremental Build of configuration gcc-debug for project RTMS ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+rtms/Controller.cc
+Creating executable: out/gcc-debug//RTMS.exe
+18:18:09 **** Incremental Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/james/Git/610/RTMS/inet/src'
+make[1]: Leaving directory '/c/Users/james/Git/610/RTMS/inet/src'
+18:18:11 **** Incremental Build of configuration gcc-debug for project RTMS ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+18:19:17 **** Incremental Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/james/Git/610/RTMS/inet/src'
+make[1]: Leaving directory '/c/Users/james/Git/610/RTMS/inet/src'
+18:19:19 **** Incremental Build of configuration gcc-debug for project RTMS ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+18:27:06 **** Incremental Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/james/Git/610/RTMS/inet/src'
+make[1]: Leaving directory '/c/Users/james/Git/610/RTMS/inet/src'
+18:27:08 **** Incremental Build of configuration gcc-debug for project RTMS ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+18:28:49 **** Incremental Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/james/Git/610/RTMS/inet/src'
+make[1]: Leaving directory '/c/Users/james/Git/610/RTMS/inet/src'
+18:28:51 **** Incremental Build of configuration gcc-debug for project RTMS ****
+make MODE=debug CONFIGNAME=gcc-debug all 

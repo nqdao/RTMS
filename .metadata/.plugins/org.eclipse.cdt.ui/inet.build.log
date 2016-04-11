@@ -1,8 +1,8 @@
-16:53:54 **** Incremental Build of configuration gcc-debug for project inet ****
+18:28:49 **** Incremental Build of configuration gcc-debug for project inet ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && /usr/bin/make all
 make[1]: Entering directory '/c/Users/james/Git/610/RTMS/inet/src'
 make[1]: Leaving directory '/c/Users/james/Git/610/RTMS/inet/src'
 
-16:53:55 Build Finished (took 894ms)
+18:28:50 Build Finished (took 996ms)
 

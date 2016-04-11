@@ -1,0 +1,67 @@
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+
+package rtms.rtms;
+import inet.linklayer.ieee80211.Ieee80211Nic;
+import inet.linklayer.ieee802154.Ieee802154NarrowbandNic;
+import inet.linklayer.ieee802154.Ieee802154UWBIRNic;
+import inet.mobility.static.StationaryMobility;
+import rtms.rtms.Controller;
+
+
+//
+// TODO documentation
+//
+module RtmsAP
+{
+    parameters:
+        @networkNode();
+        @labels(node);
+        @display("i=device/accesspoint;bgb=608,408");
+        *.interfaceTableModule = default("");
+    gates:
+        input radioIn @directIn;
+    submodules:
+        WlanNic: Ieee80211Nic {
+            parameters:
+                @display("p=130,279;q=queue");
+                mgmtType = default("Ieee80211MgmtAPSimplified");
+                mgmt.encapDecap = "true";
+        }
+        NarrowbandNic: Ieee802154NarrowbandNic {
+            @display("p=427,279");
+        }
+        UWBIRNic: Ieee802154UWBIRNic {
+            @display("p=280,279");
+        }
+        mobility: StationaryMobility {
+            @display("p=75,120;b=5,7");
+        }
+        controller: Controller {
+            @display("p=280,190");
+        }
+
+    connections allowunconnected:
+        radioIn --> { @display("m=s"); } --> WlanNic.radioIn;
+        radioIn --> { @display("m=s"); } --> NarrowbandNic.radioIn;
+        radioIn --> { @display("m=s"); } --> UWBIRNic.radioIn;
+        WlanNic.upperLayerOut --> controller.in1;
+        controller.out1 --> WlanNic.upperLayerIn;
+        UWBIRNic.upperLayerOut --> controller.in2;
+        controller.out2 --> UWBIRNic.upperLayerIn;
+        NarrowbandNic.upperLayerOut --> controller.in3;
+        controller.out3 --> NarrowbandNic.upperLayerIn;
+}
+

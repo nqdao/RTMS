@@ -17,6 +17,7 @@ package rtms.testarea;
 
 import inet.applications.ethernet.EtherAppCli;
 import inet.applications.ethernet.EtherAppSrv;
+import inet.common.queue.Sink;
 import inet.linklayer.ieee80211.Ieee80211Nic;
 import inet.mobility.static.StationaryMobility;
 import inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadioMedium;
@@ -32,11 +33,6 @@ module ThroughputClient
         input radioIn @directIn;
 
     submodules:
-        cli: EtherAppCli {
-            parameters:
-                registerSAP = false;
-                @display("b=40,24;p=180,60,col");
-        }
         wlan: Ieee80211Nic {
             parameters:
                 @display("p=112,134;q=queue");
@@ -46,12 +42,15 @@ module ThroughputClient
             parameters:
                 @display("p=50,141");
         }
+        sink: Sink {
+            @display("p=96,54");
+        }
     connections allowunconnected:
         wlan.radioIn <-- radioIn;
-        cli.out --> wlan.upperLayerIn;
+        wlan.upperLayerOut --> sink.in++;
 }
 
-network Throughput
+network Network
 {
     parameters:
         int numCli;

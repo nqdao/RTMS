@@ -18,7 +18,7 @@
 
 package rtms.testarea;
 
-import inet.applications.ethernet.EtherAppSrv;
+import inet.applications.ethernet.EtherAppCli;
 import inet.common.queue.Sink;
 import inet.linklayer.ieee80211.Ieee80211Nic;
 import inet.mobility.static.StationaryMobility;
@@ -47,12 +47,11 @@ module WirelessAPWithSink
             parameters:
                 @display("p=71,121");
         }
-        srv: EtherAppSrv {
+        cli: EtherAppCli {
             @display("p=180,138");
         }
     connections allowunconnected:
         radioIn --> { @display("m=s"); } --> wlan.radioIn;
-        wlan.upperLayerOut --> srv.in;
-        srv.out --> wlan.upperLayerIn;
+        cli.out --> wlan.upperLayerIn;
 }
 

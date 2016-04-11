@@ -1,5 +1,5 @@
-16:53:56 **** Incremental Build of configuration gcc-debug for project RTMS ****
+18:28:51 **** Incremental Build of configuration gcc-debug for project RTMS ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 
-16:53:56 Build Finished (took 243ms)
+18:28:51 Build Finished (took 243ms)
 

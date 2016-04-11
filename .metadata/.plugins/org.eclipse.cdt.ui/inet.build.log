@@ -1,8 +1,18 @@
-17:09:13 **** Incremental Build of configuration gcc-debug for project inet ****
+04:15:39 **** Build of configuration gcc-debug for project inet ****
 make MODE=debug CONFIGNAME=gcc-debug -j8 all 
 cd src && /usr/bin/make all
-make[1]: Entering directory '/c/Users/james/Git/RTMS/inet/src'
-make[1]: Leaving directory '/c/Users/james/Git/RTMS/inet/src'
+make[1]: Entering directory '/c/Users/Nhat-Quang/Documents/GitHub/RTMS/inet/src'
+MSGC: inet/applications/dhcp/DHCPMessage.msg
+MSGC: inet/transportlayer/contract/udp/UDPControlInfo.msg
+inet/applications/base/ApplicationBase.cc
+MSGC: inet/linklayer/common/Ieee802Ctrl.msg
+MSGC: inet/applications/ethernet/EtherApp.msg
+MSGC: inet/networklayer/common/IPProtocolId.msg
+MSGC: inet/applications/httptools/common/HttpEventMessages.msg
+MSGC: inet/applications/httptools/common/HttpMessages.msg
+MSGC: inet/transportlayer/contract/tcp/TCPCommand.msg
+MSGC: inet/applications/netperfmeter/NetPerfMeter.msg
+Command canceled
 
-17:09:15 Build Finished (took 1s.590ms)
+04:19:51 Build Cancelled (took 4m:12s.235ms)
 

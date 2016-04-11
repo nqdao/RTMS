@@ -1,10 +1,73 @@
-17:09:13 **** Incremental Build of configuration gcc-debug for project inet ****
+02:54:47 **** Build of configuration gcc-debug for project inet ****
 make MODE=debug CONFIGNAME=gcc-debug -j8 all 
 cd src && /usr/bin/make all
-make[1]: Entering directory '/c/Users/james/Git/RTMS/inet/src'
-make[1]: Leaving directory '/c/Users/james/Git/RTMS/inet/src'
-17:09:17 **** Build of configuration gcc-debug for project RTMS ****
+make[1]: Entering directory '/c/Users/Nhat-Quang/Documents/GitHub/RTMS/inet/src'
+MSGC: inet/applications/dhcp/DHCPMessage.msg
+MSGC: inet/applications/ethernet/EtherApp.msg
+MSGC: inet/transportlayer/contract/udp/UDPControlInfo.msg
+MSGC: inet/linklayer/common/Ieee802Ctrl.msg
+MSGC: inet/networklayer/common/IPProtocolId.msg
+MSGC: inet/applications/httptools/common/HttpEventMessages.msg
+MSGC: inet/applications/httptools/common/HttpMessages.msg
+MSGC: inet/transportlayer/contract/tcp/TCPCommand.msg
+Command canceled
+02:56:37 **** Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug -j8 all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/Nhat-Quang/Documents/GitHub/RTMS/inet/src'
+MSGC: inet/applications/dhcp/DHCPMessage.msg
+MSGC: inet/transportlayer/contract/udp/UDPControlInfo.msg
+MSGC: inet/applications/ethernet/EtherApp.msg
+MSGC: inet/linklayer/common/Ieee802Ctrl.msg
+MSGC: inet/networklayer/common/IPProtocolId.msg
+MSGC: inet/applications/httptools/common/HttpEventMessages.msg
+MSGC: inet/transportlayer/contract/tcp/TCPCommand.msg
+MSGC: inet/applications/httptools/common/HttpMessages.msg
+Command canceled
+02:56:57 **** Build of configuration gcc-debug for project inet ****
 make MODE=debug CONFIGNAME=gcc-debug all 
-Controller.cc
-Node.cc
-Creating executable: out/gcc-debug//RTMS.exe
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/Nhat-Quang/Documents/GitHub/RTMS/inet/src'
+MSGC: inet/applications/dhcp/DHCPMessage.msg
+Command canceled
+03:35:55 **** Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/Nhat-Quang/Documents/GitHub/RTMS/inet/src'
+inet/applications/base/ApplicationBase.cc
+MSGC: inet/applications/dhcp/DHCPMessage.msg
+Command canceled
+03:45:53 **** Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/Nhat-Quang/Documents/GitHub/RTMS/inet/src'
+MSGC: inet/applications/dhcp/DHCPMessage.msg
+Command canceled
+03:47:31 **** Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/Nhat-Quang/Documents/GitHub/RTMS/inet/src'
+MSGC: inet/applications/dhcp/DHCPMessage.msg
+Command canceled
+03:54:29 **** Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/Nhat-Quang/Documents/GitHub/RTMS/inet/src'
+applications/common/ApplicationBase.cc
+MSGC: applications/dhcp/DHCPMessage.msg
+Command canceled
+04:15:39 **** Build of configuration gcc-debug for project inet ****
+make MODE=debug CONFIGNAME=gcc-debug -j8 all 
+cd src && /usr/bin/make all
+make[1]: Entering directory '/c/Users/Nhat-Quang/Documents/GitHub/RTMS/inet/src'
+MSGC: inet/applications/dhcp/DHCPMessage.msg
+MSGC: inet/transportlayer/contract/udp/UDPControlInfo.msg
+inet/applications/base/ApplicationBase.cc
+MSGC: inet/linklayer/common/Ieee802Ctrl.msg
+MSGC: inet/applications/ethernet/EtherApp.msg
+MSGC: inet/networklayer/common/IPProtocolId.msg
+MSGC: inet/applications/httptools/common/HttpEventMessages.msg
+MSGC: inet/applications/httptools/common/HttpMessages.msg
+MSGC: inet/transportlayer/contract/tcp/TCPCommand.msg
+MSGC: inet/applications/netperfmeter/NetPerfMeter.msg
+Command canceled

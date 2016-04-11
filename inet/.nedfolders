@@ -5,7 +5,7 @@ tutorials
 -inet.routing.extras
 -inet.examples.manetrouting
 -inet.transportlayer.tcp_nsc
--inet.applications.voipstream
 -inet.examples.emulation
--inet.linklayer.ext
+-inet.applications.voipstream
 -inet.examples.voipstream
+-inet.linklayer.ext

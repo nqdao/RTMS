@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for RTMS
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -L../inet/out/$$\(CONFIGNAME\)/src -lINET -DINET_IMPORT -KINET_PROJ=../inet
+#  opp_makemake -f --deep -O out -I../inet/src/inet/applications/ethernet -I../inet/src/inet/linklayer/common -I../inet/src -L../inet/out/$$\(CONFIGNAME\)/src -lINET -DINET_IMPORT -KINET_PROJ=../inet
 #
 
 # Name of target to be created (-o option)
@@ -14,7 +14,15 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Irtms -Irtms/results -Itestarea -Itestarea/results
+INCLUDE_PATH = \
+    -I../inet/src/inet/applications/ethernet \
+    -I../inet/src/inet/linklayer/common \
+    -I../inet/src \
+    -I. \
+    -Irtms \
+    -Irtms/results \
+    -Itestarea \
+    -Itestarea/results
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -123,5 +131,14 @@ depend:
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/rtms/Controller.o: rtms/Controller.cc \
-	rtms/Controller.h
+	rtms/Controller.h \
+	$(INET_PROJ)/src/inet/applications/ethernet/EtherApp_m.h \
+	$(INET_PROJ)/src/inet/common/Compat.h \
+	$(INET_PROJ)/src/inet/common/INETDefs.h \
+	$(INET_PROJ)/src/inet/common/InitStages.h \
+	$(INET_PROJ)/src/inet/features.h \
+	$(INET_PROJ)/src/inet/linklayer/common/Ieee802Ctrl.h \
+	$(INET_PROJ)/src/inet/linklayer/common/Ieee802Ctrl_m.h \
+	$(INET_PROJ)/src/inet/linklayer/common/MACAddress.h \
+	$(INET_PROJ)/src/inet/linklayer/contract/IMACProtocolControlInfo.h
 

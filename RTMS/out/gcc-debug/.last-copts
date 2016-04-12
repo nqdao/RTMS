@@ -1,1 +1,1 @@
--g -Wall   -I/usr/include -fno-stack-protector  -DHAVE_PCAP -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER -DINET_IMPORT -I. -Irtms -Irtms/results -Itestarea -Itestarea/results -IC:/Omnet/omnetpp-4.6-src-windows/omnetpp-4.6/include
+-g -Wall   -I/usr/include -fno-stack-protector  -DHAVE_PCAP -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER -DINET_IMPORT -I../inet/src/inet/applications/ethernet -I../inet/src/inet/linklayer/common -I../inet/src -I. -Irtms -Irtms/results -Itestarea -Itestarea/results -IC:/Omnet/omnetpp-4.6-src-windows/omnetpp-4.6/include

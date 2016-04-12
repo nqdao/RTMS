@@ -17,12 +17,21 @@
 #define __RTMS_CONTROLLER_H_
 
 #include <omnetpp.h>
+#include <string.h>
+#include <MACAddress.h>
+#include <EtherApp_m.h>
+#include <Ieee802Ctrl.h>
 
 /**
  * TODO - Generated class
  */
 class Controller : public cSimpleModule
 {
+  private:
+
+    inet::MACAddress prem_addr;
+    inet::MACAddress std_addr;
+    inet::MACAddress sensor_addr;
   protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);

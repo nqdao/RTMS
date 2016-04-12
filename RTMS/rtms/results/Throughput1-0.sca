@@ -1,25 +1,25 @@
 version 2
-run Throughput1-0-20160411-18:28:57-6456
+run Throughput1-0-20160412-14:04:20-2308
 attr configname Throughput1
-attr datetime 20160411-18:28:57
+attr datetime 20160412-14:04:20
 attr experiment Throughput1
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network Network
-attr processid 6456
+attr processid 2308
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-scalar Network.PremiumUser.wlan.mac.statistics 	numReceivedUnicast 	4
+scalar Network.PremiumUser.wlan.mac.statistics 	numReceivedUnicast 	11
 scalar Network.PremiumUser.wlan.mac.statistics 	numReceivedBroadcast 	0
 scalar Network.PremiumUser.wlan.mac.statistics 	numReceivedMulticast 	0
-scalar Network.PremiumUser.wlan.mac.statistics 	numReceivedNotForUs 	0
-scalar Network.PremiumUser.wlan.mac.statistics 	numReceivedErroneous 	0
+scalar Network.PremiumUser.wlan.mac.statistics 	numReceivedNotForUs 	12
+scalar Network.PremiumUser.wlan.mac.statistics 	numReceivedErroneous 	1
 scalar Network.PremiumUser.wlan.mac 	rcvdPkFromHL:count 	0
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
@@ -28,27 +28,27 @@ scalar Network.PremiumUser.wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, sum(packetBytes)"
-scalar Network.PremiumUser.wlan.mac 	passedUpPk:count 	4
+scalar Network.PremiumUser.wlan.mac 	passedUpPk:count 	11
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, count"
-scalar Network.PremiumUser.wlan.mac 	passedUpPk:sum(packetBytes) 	4144
+scalar Network.PremiumUser.wlan.mac 	passedUpPk:sum(packetBytes) 	14696
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, sum(packetBytes)"
-scalar Network.PremiumUser.wlan.mac 	rcvdPkFromLL:count 	4
+scalar Network.PremiumUser.wlan.mac 	rcvdPkFromLL:count 	36
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, count"
-scalar Network.PremiumUser.wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	4144
+scalar Network.PremiumUser.wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	26832
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, sum(packetBytes)"
-scalar Network.PremiumUser.wlan.mac 	sentDownPk:count 	4
+scalar Network.PremiumUser.wlan.mac 	sentDownPk:count 	11
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, count"
-scalar Network.PremiumUser.wlan.mac 	sentDownPk:sum(packetBytes) 	56
+scalar Network.PremiumUser.wlan.mac 	sentDownPk:sum(packetBytes) 	154
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, sum(packetBytes)"
@@ -137,98 +137,71 @@ bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
 statistic Network.PremiumUser.wlan.radio 	packetErrorRate:histogram
-field count 4
-field mean 0
-field stddev 0
-field sum 0
-field sqrsum 0
+field count 36
+field mean 0.027777777777778
+field stddev 0.16666666666667
+field sum 1
+field sqrsum 1
 field min 0
-field max 0
+field max 1
 attr source  packetErrorRate
 attr title  "Packet error rate, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	4
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-1	0
+bin	0	35
+bin	1	1
+bin	2	0
 statistic Network.PremiumUser.wlan.radio 	minSNIR:histogram
-field count 4
-field mean 3740.4223978739
-field stddev 2.6973983046972e-006
-field sum 14961.689591496
-field sqrsum 55963038.858067
-field min 3740.4223978739
-field max 3740.4223978739
+field count 36
+field mean 5586.3686691219
+field stddev 3398.9225524812
+field sum 201109.27208839
+field sqrsum 1527814144.7863
+field min 0.99973272197211
+field max 10896.511205747
 attr source  minSNIR
 attr title  "Min SNIR, histogram"
 bin	-INF	0
-bin	3739.9223978739	0
-bin	3739.9557312072	0
-bin	3739.9890645406	0
-bin	3740.0223978739	0
-bin	3740.0557312072	0
-bin	3740.0890645406	0
-bin	3740.1223978739	0
-bin	3740.1557312072	0
-bin	3740.1890645406	0
-bin	3740.2223978739	0
-bin	3740.2557312072	0
-bin	3740.2890645406	0
-bin	3740.3223978739	0
-bin	3740.3557312072	0
-bin	3740.3890645406	0
-bin	3740.4223978739	4
-bin	3740.4557312072	0
-bin	3740.4890645406	0
-bin	3740.5223978739	0
-bin	3740.5557312072	0
-bin	3740.5890645406	0
-bin	3740.6223978739	0
-bin	3740.6557312072	0
-bin	3740.6890645406	0
-bin	3740.7223978739	0
-bin	3740.7557312072	0
-bin	3740.7890645406	0
-bin	3740.8223978739	0
-bin	3740.8557312072	0
-bin	3740.8890645406	0
-bin	3740.9223978739	0
-scalar Network.PremiumUser.wlan.radio 	transmissionState:count 	16
+bin	-5446.7560037903	0
+bin	-4720.3885722554	0
+bin	-3994.0211407204	0
+bin	-3267.6537091854	0
+bin	-2541.2862776504	0
+bin	-1814.9188461155	0
+bin	-1088.5514145805	0
+bin	-362.18398304552	1
+bin	364.18344848946	0
+bin	1090.5508800244	0
+bin	1816.9183115594	0
+bin	2543.2857430944	2
+bin	3269.6531746294	23
+bin	3996.0206061643	0
+bin	4722.3880376993	0
+bin	5448.7554692343	0
+bin	6175.1229007693	0
+bin	6901.4903323042	0
+bin	7627.8577638392	0
+bin	8354.2251953742	0
+bin	9080.5926269092	0
+bin	9806.9600584441	0
+bin	10533.327489979	10
+bin	11259.694921514	0
+bin	11986.062353049	0
+bin	12712.429784584	0
+bin	13438.797216119	0
+bin	14165.164647654	0
+bin	14891.532079189	0
+bin	15617.899510724	0
+bin	16344.266942259	0
+scalar Network.PremiumUser.wlan.radio 	transmissionState:count 	43
 attr interpolationmode  sample-hold
 attr source  transmissionStateChanged
 attr title  "Radio transmission state, count"
-scalar Network.PremiumUser.wlan.radio 	receptionState:count 	17
+scalar Network.PremiumUser.wlan.radio 	receptionState:count 	94
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, count"
-scalar Network.PremiumUser.wlan.radio 	radioMode:count 	10
+scalar Network.PremiumUser.wlan.radio 	radioMode:count 	23
 attr interpolationmode  sample-hold
 attr source  radioModeChanged
 attr title  "Radio mode, count"
@@ -275,54 +248,54 @@ bin	0.4	0
 bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
-scalar Network.PremiumUser.sink 	throughput 	7600428.9261212
-scalar Network.PremiumUser.sink 	packetPerSec 	950.05361576515
-scalar Network.PremiumUser.sink 	rcvdPk:count 	4
+scalar Network.PremiumUser.sink 	throughput 	496424.21768966
+scalar Network.PremiumUser.sink 	packetPerSec 	47.733097854775
+scalar Network.PremiumUser.sink 	rcvdPk:count 	11
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, count"
-scalar Network.PremiumUser.sink 	rcvdPk:sum(packetBytes) 	4000
+scalar Network.PremiumUser.sink 	rcvdPk:sum(packetBytes) 	14300
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, sum(packetBytes)"
-scalar Network.ap.WlanNic.mac.statistics 	numReceivedUnicast 	0
-scalar Network.ap.WlanNic.mac.statistics 	numReceivedBroadcast 	0
-scalar Network.ap.WlanNic.mac.statistics 	numReceivedMulticast 	0
-scalar Network.ap.WlanNic.mac.statistics 	numReceivedNotForUs 	0
-scalar Network.ap.WlanNic.mac.statistics 	numReceivedErroneous 	0
-scalar Network.ap.WlanNic.mac 	rcvdPkFromHL:count 	5
+scalar Network.ap.wlanNic1.mac.statistics 	numReceivedUnicast 	0
+scalar Network.ap.wlanNic1.mac.statistics 	numReceivedBroadcast 	0
+scalar Network.ap.wlanNic1.mac.statistics 	numReceivedMulticast 	0
+scalar Network.ap.wlanNic1.mac.statistics 	numReceivedNotForUs 	11
+scalar Network.ap.wlanNic1.mac.statistics 	numReceivedErroneous 	0
+scalar Network.ap.wlanNic1.mac 	rcvdPkFromHL:count 	276
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, count"
-scalar Network.ap.WlanNic.mac 	rcvdPkFromHL:sum(packetBytes) 	5180
+scalar Network.ap.wlanNic1.mac 	rcvdPkFromHL:sum(packetBytes) 	244536
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, sum(packetBytes)"
-scalar Network.ap.WlanNic.mac 	passedUpPk:count 	0
+scalar Network.ap.wlanNic1.mac 	passedUpPk:count 	0
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, count"
-scalar Network.ap.WlanNic.mac 	passedUpPk:sum(packetBytes) 	0
+scalar Network.ap.wlanNic1.mac 	passedUpPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, sum(packetBytes)"
-scalar Network.ap.WlanNic.mac 	rcvdPkFromLL:count 	4
+scalar Network.ap.wlanNic1.mac 	rcvdPkFromLL:count 	33
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, count"
-scalar Network.ap.WlanNic.mac 	rcvdPkFromLL:sum(packetBytes) 	56
+scalar Network.ap.wlanNic1.mac 	rcvdPkFromLL:sum(packetBytes) 	15004
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, sum(packetBytes)"
-scalar Network.ap.WlanNic.mac 	sentDownPk:count 	5
+scalar Network.ap.wlanNic1.mac 	sentDownPk:count 	13
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, count"
-scalar Network.ap.WlanNic.mac 	sentDownPk:sum(packetBytes) 	5180
+scalar Network.ap.wlanNic1.mac 	sentDownPk:sum(packetBytes) 	11668
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, sum(packetBytes)"
-statistic Network.ap.WlanNic.radio 	symbolErrorRate:histogram
+statistic Network.ap.wlanNic1.radio 	symbolErrorRate:histogram
 field count 0
 field mean nan
 field stddev nan
@@ -364,7 +337,7 @@ bin	0.4	0
 bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
-statistic Network.ap.WlanNic.radio 	bitErrorRate:histogram
+statistic Network.ap.wlanNic1.radio 	bitErrorRate:histogram
 field count 0
 field mean nan
 field stddev nan
@@ -406,8 +379,8 @@ bin	0.4	0
 bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
-statistic Network.ap.WlanNic.radio 	packetErrorRate:histogram
-field count 4
+statistic Network.ap.wlanNic1.radio 	packetErrorRate:histogram
+field count 33
 field mean 0
 field stddev 0
 field sum 0
@@ -432,7 +405,7 @@ bin	-0.13333333333333	0
 bin	-0.1	0
 bin	-0.066666666666667	0
 bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	4
+bin	-6.9388939039072e-018	33
 bin	0.033333333333333	0
 bin	0.066666666666667	0
 bin	0.1	0
@@ -448,61 +421,61 @@ bin	0.4	0
 bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
-statistic Network.ap.WlanNic.radio 	minSNIR:histogram
-field count 4
-field mean 3740.4223978739
-field stddev 2.6973983046972e-006
-field sum 14961.689591496
-field sqrsum 55963038.858067
+statistic Network.ap.wlanNic1.radio 	minSNIR:histogram
+field count 33
+field mean 666666670131.22
+field stddev 957427105268.55
+field sum 22000000114330
+field sqrsum 4.4e+025
 field min 3740.4223978739
-field max 3740.4223978739
+field max 2000000000000
 attr source  minSNIR
 attr title  "Min SNIR, histogram"
 bin	-INF	0
-bin	3739.9223978739	0
-bin	3739.9557312072	0
-bin	3739.9890645406	0
-bin	3740.0223978739	0
-bin	3740.0557312072	0
-bin	3740.0890645406	0
-bin	3740.1223978739	0
-bin	3740.1557312072	0
-bin	3740.1890645406	0
-bin	3740.2223978739	0
-bin	3740.2557312072	0
-bin	3740.2890645406	0
-bin	3740.3223978739	0
-bin	3740.3557312072	0
-bin	3740.3890645406	0
-bin	3740.4223978739	4
-bin	3740.4557312072	0
-bin	3740.4890645406	0
-bin	3740.5223978739	0
-bin	3740.5557312072	0
-bin	3740.5890645406	0
-bin	3740.6223978739	0
-bin	3740.6557312072	0
-bin	3740.6890645406	0
-bin	3740.7223978739	0
-bin	3740.7557312072	0
-bin	3740.7890645406	0
-bin	3740.8223978739	0
-bin	3740.8557312072	0
-bin	3740.8890645406	0
-bin	3740.9223978739	0
-scalar Network.ap.WlanNic.radio 	transmissionState:count 	18
+bin	-999999994389.37	0
+bin	-866666661305.39	0
+bin	-733333328221.42	0
+bin	-599999995137.45	0
+bin	-466666662053.48	0
+bin	-333333328969.51	0
+bin	-199999995885.54	0
+bin	-66666662801.564	22
+bin	66666670282.408	0
+bin	200000003366.38	0
+bin	333333336450.35	0
+bin	466666669534.32	0
+bin	600000002618.3	0
+bin	733333335702.27	0
+bin	866666668786.24	0
+bin	1000000001870.2	0
+bin	1133333334954.2	0
+bin	1266666668038.2	0
+bin	1400000001122.1	0
+bin	1533333334206.1	0
+bin	1666666667290.1	0
+bin	1800000000374	0
+bin	1933333333458	11
+bin	2066666666542	0
+bin	2199999999626	0
+bin	2333333332709.9	0
+bin	2466666665793.9	0
+bin	2599999998877.9	0
+bin	2733333331961.8	0
+bin	2866666665045.8	0
+bin	2999999998129.8	0
+scalar Network.ap.wlanNic1.radio 	transmissionState:count 	52
 attr interpolationmode  sample-hold
 attr source  transmissionStateChanged
 attr title  "Radio transmission state, count"
-scalar Network.ap.WlanNic.radio 	receptionState:count 	18
+scalar Network.ap.wlanNic1.radio 	receptionState:count 	95
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, count"
-scalar Network.ap.WlanNic.radio 	radioMode:count 	11
+scalar Network.ap.wlanNic1.radio 	radioMode:count 	28
 attr interpolationmode  sample-hold
 attr source  radioModeChanged
 attr title  "Radio mode, count"
-statistic Network.ap.WlanNic.radio 	radioChannel:histogram
+statistic Network.ap.wlanNic1.radio 	radioChannel:histogram
 field count 1
 field mean 0
 field stddev nan
@@ -545,23 +518,23 @@ bin	0.4	0
 bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
-scalar Network.ap.cli 	sentPk:count 	5
+scalar Network.ap.cli1 	sentPk:count 	230
 attr interpolationmode  none
 attr source  sentPk
 attr title  "packets sent, count"
-scalar Network.ap.cli 	sentPk:sum(packetBytes) 	5000
+scalar Network.ap.cli1 	sentPk:sum(packetBytes) 	230000
 attr interpolationmode  none
 attr source  sentPk
 attr title  "packets sent, sum(packetBytes)"
-scalar Network.ap.cli 	rcvdPk:count 	0
+scalar Network.ap.cli1 	rcvdPk:count 	0
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, count"
-scalar Network.ap.cli 	rcvdPk:sum(packetBytes) 	0
+scalar Network.ap.cli1 	rcvdPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, sum(packetBytes)"
-statistic Network.ap.cli 	endToEndDelay:histogram
+statistic Network.ap.cli1 	endToEndDelay:histogram
 field count 0
 field mean nan
 field stddev nan
@@ -605,14 +578,627 @@ bin	0.4	0
 bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
-scalar Network.radioMedium.propagation 	"Arrival computation count" 	27
-scalar Network.radioMedium 	"transmission count" 	9
-scalar Network.radioMedium 	"radio frame send count" 	27
-scalar Network.radioMedium 	"reception computation count" 	24
-scalar Network.radioMedium 	"interference computation count" 	84
-scalar Network.radioMedium 	"reception decision computation count" 	24
-scalar Network.radioMedium 	"listening decision computation count" 	36
-scalar Network.radioMedium 	"reception cache hit" 	85.714285714286
+scalar Network.ap.wlanNic2.mac.statistics 	numReceivedUnicast 	0
+scalar Network.ap.wlanNic2.mac.statistics 	numReceivedBroadcast 	0
+scalar Network.ap.wlanNic2.mac.statistics 	numReceivedMulticast 	0
+scalar Network.ap.wlanNic2.mac.statistics 	numReceivedNotForUs 	12
+scalar Network.ap.wlanNic2.mac.statistics 	numReceivedErroneous 	0
+scalar Network.ap.wlanNic2.mac 	rcvdPkFromHL:count 	461
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Network.ap.wlanNic2.mac 	rcvdPkFromHL:sum(packetBytes) 	615896
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Network.ap.wlanNic2.mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Network.ap.wlanNic2.mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Network.ap.wlanNic2.mac 	rcvdPkFromLL:count 	34
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar Network.ap.wlanNic2.mac 	rcvdPkFromLL:sum(packetBytes) 	10940
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar Network.ap.wlanNic2.mac 	sentDownPk:count 	12
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar Network.ap.wlanNic2.mac 	sentDownPk:sum(packetBytes) 	16032
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+statistic Network.ap.wlanNic2.radio 	symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic Network.ap.wlanNic2.radio 	bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic Network.ap.wlanNic2.radio 	packetErrorRate:histogram
+field count 34
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	34
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic Network.ap.wlanNic2.radio 	minSNIR:histogram
+field count 34
+field mean 705882356303.83
+field stddev 970142497624.5
+field sum 24000000114330
+field sqrsum 4.8e+025
+field min 3740.4223978739
+field max 2000000000000
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-999999994389.37	0
+bin	-866666661305.39	0
+bin	-733333328221.42	0
+bin	-599999995137.45	0
+bin	-466666662053.48	0
+bin	-333333328969.51	0
+bin	-199999995885.54	0
+bin	-66666662801.564	22
+bin	66666670282.408	0
+bin	200000003366.38	0
+bin	333333336450.35	0
+bin	466666669534.32	0
+bin	600000002618.3	0
+bin	733333335702.27	0
+bin	866666668786.24	0
+bin	1000000001870.2	0
+bin	1133333334954.2	0
+bin	1266666668038.2	0
+bin	1400000001122.1	0
+bin	1533333334206.1	0
+bin	1666666667290.1	0
+bin	1800000000374	0
+bin	1933333333458	12
+bin	2066666666542	0
+bin	2199999999626	0
+bin	2333333332709.9	0
+bin	2466666665793.9	0
+bin	2599999998877.9	0
+bin	2733333331961.8	0
+bin	2866666665045.8	0
+bin	2999999998129.8	0
+scalar Network.ap.wlanNic2.radio 	transmissionState:count 	48
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar Network.ap.wlanNic2.radio 	receptionState:count 	94
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar Network.ap.wlanNic2.radio 	radioMode:count 	26
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic Network.ap.wlanNic2.radio 	radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar Network.ap.wlanNic3.mac.statistics 	numReceivedUnicast 	0
+scalar Network.ap.wlanNic3.mac.statistics 	numReceivedBroadcast 	0
+scalar Network.ap.wlanNic3.mac.statistics 	numReceivedMulticast 	0
+scalar Network.ap.wlanNic3.mac.statistics 	numReceivedNotForUs 	23
+scalar Network.ap.wlanNic3.mac.statistics 	numReceivedErroneous 	1
+scalar Network.ap.wlanNic3.mac 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Network.ap.wlanNic3.mac 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Network.ap.wlanNic3.mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Network.ap.wlanNic3.mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Network.ap.wlanNic3.mac 	rcvdPkFromLL:count 	46
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar Network.ap.wlanNic3.mac 	rcvdPkFromLL:sum(packetBytes) 	26972
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar Network.ap.wlanNic3.mac 	sentDownPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar Network.ap.wlanNic3.mac 	sentDownPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+statistic Network.ap.wlanNic3.radio 	symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic Network.ap.wlanNic3.radio 	bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic Network.ap.wlanNic3.radio 	packetErrorRate:histogram
+field count 46
+field mean 0.021739130434783
+field stddev 0.1474419561549
+field sum 1
+field sqrsum 1
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-1	0
+bin	0	45
+bin	1	1
+bin	2	0
+statistic Network.ap.wlanNic3.radio 	minSNIR:histogram
+field count 46
+field mean 1000000002485.5
+field stddev 1011050056693.9
+field sum 46000000114331
+field sqrsum 9.2e+025
+field min 0.9999999999995
+field max 2000000000000
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-999999999998.5	0
+bin	-866666666665.23	0
+bin	-733333333331.97	0
+bin	-599999999998.7	0
+bin	-466666666665.43	0
+bin	-333333333332.17	0
+bin	-199999999998.9	0
+bin	-66666666665.633	23
+bin	66666666667.633	0
+bin	200000000000.9	0
+bin	333333333334.17	0
+bin	466666666667.43	0
+bin	600000000000.7	0
+bin	733333333333.97	0
+bin	866666666667.23	0
+bin	1000000000000.5	0
+bin	1133333333333.8	0
+bin	1266666666667	0
+bin	1400000000000.3	0
+bin	1533333333333.6	0
+bin	1666666666666.8	0
+bin	1800000000000.1	0
+bin	1933333333333.4	23
+bin	2066666666666.6	0
+bin	2199999999999.9	0
+bin	2333333333333.2	0
+bin	2466666666666.4	0
+bin	2599999999999.7	0
+bin	2733333333333	0
+bin	2866666666666.2	0
+bin	2999999999999.5	0
+scalar Network.ap.wlanNic3.radio 	transmissionState:count 	0
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar Network.ap.wlanNic3.radio 	receptionState:count 	94
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar Network.ap.wlanNic3.radio 	radioMode:count 	2
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic Network.ap.wlanNic3.radio 	radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar Network.ap.cli2 	sentPk:count 	461
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Network.ap.cli2 	sentPk:sum(packetBytes) 	599300
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Network.ap.cli2 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Network.ap.cli2 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic Network.ap.cli2 	endToEndDelay:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar Network.ap.cli3 	sentPk:count 	46
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Network.ap.cli3 	sentPk:sum(packetBytes) 	4600
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Network.ap.cli3 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Network.ap.cli3 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic Network.ap.cli3 	endToEndDelay:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar Network.radioMedium.propagation 	"Arrival computation count" 	240
+scalar Network.radioMedium 	"transmission count" 	48
+scalar Network.radioMedium 	"radio frame send count" 	240
+scalar Network.radioMedium 	"reception computation count" 	240
+scalar Network.radioMedium 	"interference computation count" 	750
+scalar Network.radioMedium 	"reception decision computation count" 	229
+scalar Network.radioMedium 	"listening decision computation count" 	283
+scalar Network.radioMedium 	"reception cache hit" 	85.410334346505
 attr unit  %
 scalar Network.radioMedium 	"interference cache hit" 	66.666666666667
 attr unit  %
@@ -624,11 +1210,11 @@ scalar Network.radioMedium 	"reception decision cache hit" 	50
 attr unit  %
 scalar Network.radioMedium 	"reception result cache hit" 	0
 attr unit  %
-scalar Network.StandardUser.wlan.mac.statistics 	numReceivedUnicast 	0
+scalar Network.StandardUser.wlan.mac.statistics 	numReceivedUnicast 	10
 scalar Network.StandardUser.wlan.mac.statistics 	numReceivedBroadcast 	0
 scalar Network.StandardUser.wlan.mac.statistics 	numReceivedMulticast 	0
-scalar Network.StandardUser.wlan.mac.statistics 	numReceivedNotForUs 	4
-scalar Network.StandardUser.wlan.mac.statistics 	numReceivedErroneous 	0
+scalar Network.StandardUser.wlan.mac.statistics 	numReceivedNotForUs 	13
+scalar Network.StandardUser.wlan.mac.statistics 	numReceivedErroneous 	1
 scalar Network.StandardUser.wlan.mac 	rcvdPkFromHL:count 	0
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
@@ -637,27 +1223,27 @@ scalar Network.StandardUser.wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, sum(packetBytes)"
-scalar Network.StandardUser.wlan.mac 	passedUpPk:count 	0
+scalar Network.StandardUser.wlan.mac 	passedUpPk:count 	10
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, count"
-scalar Network.StandardUser.wlan.mac 	passedUpPk:sum(packetBytes) 	0
+scalar Network.StandardUser.wlan.mac 	passedUpPk:sum(packetBytes) 	10360
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, sum(packetBytes)"
-scalar Network.StandardUser.wlan.mac 	rcvdPkFromLL:count 	8
+scalar Network.StandardUser.wlan.mac 	rcvdPkFromLL:count 	36
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, count"
-scalar Network.StandardUser.wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	4200
+scalar Network.StandardUser.wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	26832
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, sum(packetBytes)"
-scalar Network.StandardUser.wlan.mac 	sentDownPk:count 	0
+scalar Network.StandardUser.wlan.mac 	sentDownPk:count 	10
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, count"
-scalar Network.StandardUser.wlan.mac 	sentDownPk:sum(packetBytes) 	0
+scalar Network.StandardUser.wlan.mac 	sentDownPk:sum(packetBytes) 	140
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, sum(packetBytes)"
@@ -746,98 +1332,71 @@ bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
 statistic Network.StandardUser.wlan.radio 	packetErrorRate:histogram
-field count 8
-field mean 0
-field stddev 0
-field sum 0
-field sqrsum 0
+field count 36
+field mean 0.027777777777778
+field stddev 0.16666666666667
+field sum 1
+field sqrsum 1
 field min 0
-field max 0
+field max 1
 attr source  packetErrorRate
 attr title  "Packet error rate, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	8
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-1	0
+bin	0	35
+bin	1	1
+bin	2	0
 statistic Network.StandardUser.wlan.radio 	minSNIR:histogram
-field count 8
-field mean 8791.5752982081
-field stddev 2250.2711391791
-field sum 70332.602385665
-field sqrsum 653780411.19127
-field min 6686.6393906697
-field max 10896.511205747
+field count 36
+field mean 8066.4484040839
+field stddev 2699.5397084368
+field sum 290392.14254702
+field sqrsum 2597496247.1168
+field min 0.99985047040643
+field max 13816.66232684
 attr source  minSNIR
 attr title  "Min SNIR, histogram"
 bin	-INF	0
-bin	4581.7034831312	0
-bin	4862.3616041364	0
-bin	5143.0197251415	0
-bin	5423.6778461466	0
-bin	5704.3359671517	0
-bin	5984.9940881569	0
-bin	6265.652209162	0
-bin	6546.3103301671	4
-bin	6826.9684511723	0
-bin	7107.6265721774	0
-bin	7388.2846931825	0
-bin	7668.9428141876	0
-bin	7949.6009351928	0
-bin	8230.2590561979	0
-bin	8510.917177203	0
-bin	8791.5752982081	0
-bin	9072.2334192133	0
-bin	9352.8915402184	0
-bin	9633.5496612235	0
-bin	9914.2077822286	0
-bin	10194.865903234	0
-bin	10475.524024239	0
-bin	10756.182145244	4
-bin	11036.840266249	0
-bin	11317.498387254	0
-bin	11598.156508259	0
-bin	11878.814629265	0
-bin	12159.47275027	0
-bin	12440.130871275	0
-bin	12720.78899228	0
-bin	13001.447113285	0
-scalar Network.StandardUser.wlan.radio 	transmissionState:count 	0
+bin	-6906.8313877145	0
+bin	-5985.7872226232	0
+bin	-5064.7430575319	0
+bin	-4143.6988924406	0
+bin	-3222.6547273492	0
+bin	-2301.6105622579	0
+bin	-1380.5663971666	0
+bin	-459.52223207526	1
+bin	461.52193301607	0
+bin	1382.5660981074	0
+bin	2303.6102631987	0
+bin	3224.6544282901	0
+bin	4145.6985933814	0
+bin	5066.7427584727	0
+bin	5987.786923564	23
+bin	6908.8310886554	0
+bin	7829.8752537467	0
+bin	8750.919418838	0
+bin	9671.9635839293	0
+bin	10593.007749021	10
+bin	11514.051914112	0
+bin	12435.096079203	0
+bin	13356.140244295	2
+bin	14277.184409386	0
+bin	15198.228574477	0
+bin	16119.272739569	0
+bin	17040.31690466	0
+bin	17961.361069751	0
+bin	18882.405234843	0
+bin	19803.449399934	0
+bin	20724.493565025	0
+scalar Network.StandardUser.wlan.radio 	transmissionState:count 	40
 attr interpolationmode  sample-hold
 attr source  transmissionStateChanged
 attr title  "Radio transmission state, count"
-scalar Network.StandardUser.wlan.radio 	receptionState:count 	17
+scalar Network.StandardUser.wlan.radio 	receptionState:count 	94
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, count"
-scalar Network.StandardUser.wlan.radio 	radioMode:count 	2
+scalar Network.StandardUser.wlan.radio 	radioMode:count 	22
 attr interpolationmode  sample-hold
 attr source  radioModeChanged
 attr title  "Radio mode, count"
@@ -884,21 +1443,21 @@ bin	0.4	0
 bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
-scalar Network.StandardUser.sink 	throughput 	0
-scalar Network.StandardUser.sink 	packetPerSec 	0
-scalar Network.StandardUser.sink 	rcvdPk:count 	0
+scalar Network.StandardUser.sink 	throughput 	385324.52078948
+scalar Network.StandardUser.sink 	packetPerSec 	48.165565098685
+scalar Network.StandardUser.sink 	rcvdPk:count 	10
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, count"
-scalar Network.StandardUser.sink 	rcvdPk:sum(packetBytes) 	0
+scalar Network.StandardUser.sink 	rcvdPk:sum(packetBytes) 	10000
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, sum(packetBytes)"
-scalar Network.Sensor.wlan.mac.statistics 	numReceivedUnicast 	0
+scalar Network.Sensor.wlan.mac.statistics 	numReceivedUnicast 	2
 scalar Network.Sensor.wlan.mac.statistics 	numReceivedBroadcast 	0
 scalar Network.Sensor.wlan.mac.statistics 	numReceivedMulticast 	0
-scalar Network.Sensor.wlan.mac.statistics 	numReceivedNotForUs 	4
-scalar Network.Sensor.wlan.mac.statistics 	numReceivedErroneous 	0
+scalar Network.Sensor.wlan.mac.statistics 	numReceivedNotForUs 	21
+scalar Network.Sensor.wlan.mac.statistics 	numReceivedErroneous 	1
 scalar Network.Sensor.wlan.mac 	rcvdPkFromHL:count 	0
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
@@ -907,27 +1466,27 @@ scalar Network.Sensor.wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, sum(packetBytes)"
-scalar Network.Sensor.wlan.mac 	passedUpPk:count 	0
+scalar Network.Sensor.wlan.mac 	passedUpPk:count 	2
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, count"
-scalar Network.Sensor.wlan.mac 	passedUpPk:sum(packetBytes) 	0
+scalar Network.Sensor.wlan.mac 	passedUpPk:sum(packetBytes) 	272
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, sum(packetBytes)"
-scalar Network.Sensor.wlan.mac 	rcvdPkFromLL:count 	8
+scalar Network.Sensor.wlan.mac 	rcvdPkFromLL:count 	44
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, count"
-scalar Network.Sensor.wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	4200
+scalar Network.Sensor.wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	26944
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, sum(packetBytes)"
-scalar Network.Sensor.wlan.mac 	sentDownPk:count 	0
+scalar Network.Sensor.wlan.mac 	sentDownPk:count 	2
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, count"
-scalar Network.Sensor.wlan.mac 	sentDownPk:sum(packetBytes) 	0
+scalar Network.Sensor.wlan.mac 	sentDownPk:sum(packetBytes) 	28
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, sum(packetBytes)"
@@ -1016,98 +1575,71 @@ bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
 statistic Network.Sensor.wlan.radio 	packetErrorRate:histogram
-field count 8
-field mean 0
-field stddev 0
-field sum 0
-field sqrsum 0
+field count 44
+field mean 0.022727272727273
+field stddev 0.15075567228888
+field sum 1
+field sqrsum 1
 field min 0
-field max 0
+field max 1
 attr source  packetErrorRate
 attr title  "Packet error rate, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	8
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-1	0
+bin	0	43
+bin	1	1
+bin	2	0
 statistic Network.Sensor.wlan.radio 	minSNIR:histogram
-field count 8
-field mean 4043.2424591452
-field stddev 1054.6341191815
-field sum 32345.939673161
-field sqrsum 138568248.54487
-field min 3056.7225735504
-field max 5029.76234474
+field count 44
+field mean 6464.0768803216
+field stddev 4164.6185923056
+field sum 284419.38273415
+field sqrsum 2584302821.0804
+field min 0.99980122296951
+field max 13816.66232684
 attr source  minSNIR
 attr title  "Min SNIR, histogram"
 bin	-INF	0
-bin	2070.2026879556	0
-bin	2201.7386727015	0
-bin	2333.2746574475	0
-bin	2464.8106421935	0
-bin	2596.3466269395	0
-bin	2727.8826116854	0
-bin	2859.4185964314	0
-bin	2990.9545811774	4
-bin	3122.4905659234	0
-bin	3254.0265506693	0
-bin	3385.5625354153	0
-bin	3517.0985201613	0
-bin	3648.6345049073	0
-bin	3780.1704896532	0
-bin	3911.7064743992	0
-bin	4043.2424591452	0
-bin	4174.7784438912	0
-bin	4306.3144286371	0
-bin	4437.8504133831	0
-bin	4569.3863981291	0
-bin	4700.9223828751	0
-bin	4832.458367621	0
-bin	4963.994352367	4
-bin	5095.530337113	0
-bin	5227.066321859	0
-bin	5358.6023066049	0
-bin	5490.1382913509	0
-bin	5621.6742760969	0
-bin	5753.2102608429	0
-bin	5884.7462455888	0
-bin	6016.2822303348	0
-scalar Network.Sensor.wlan.radio 	transmissionState:count 	0
+bin	-6906.8314615857	0
+bin	-5985.7872932112	0
+bin	-5064.7431248367	0
+bin	-4143.6989564622	0
+bin	-3222.6547880877	0
+bin	-2301.6106197133	0
+bin	-1380.5664513388	0
+bin	-459.52228296427	1
+bin	461.52188541021	0
+bin	1382.5660537847	0
+bin	2303.6102221592	10
+bin	3224.6543905337	0
+bin	4145.6985589082	23
+bin	5066.7427272827	0
+bin	5987.7868956572	0
+bin	6908.8310640316	0
+bin	7829.8752324061	0
+bin	8750.9194007806	0
+bin	9671.9635691551	0
+bin	10593.00773753	0
+bin	11514.051905904	0
+bin	12435.096074279	0
+bin	13356.140242653	10
+bin	14277.184411028	0
+bin	15198.228579402	0
+bin	16119.272747777	0
+bin	17040.316916151	0
+bin	17961.361084526	0
+bin	18882.4052529	0
+bin	19803.449421275	0
+bin	20724.493589649	0
+scalar Network.Sensor.wlan.radio 	transmissionState:count 	8
 attr interpolationmode  sample-hold
 attr source  transmissionStateChanged
 attr title  "Radio transmission state, count"
-scalar Network.Sensor.wlan.radio 	receptionState:count 	17
+scalar Network.Sensor.wlan.radio 	receptionState:count 	94
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, count"
-scalar Network.Sensor.wlan.radio 	radioMode:count 	2
+scalar Network.Sensor.wlan.radio 	radioMode:count 	6
 attr interpolationmode  sample-hold
 attr source  radioModeChanged
 attr title  "Radio mode, count"
@@ -1154,13 +1686,13 @@ bin	0.4	0
 bin	0.43333333333333	0
 bin	0.46666666666667	0
 bin	0.5	0
-scalar Network.Sensor.sink 	throughput 	0
-scalar Network.Sensor.sink 	packetPerSec 	0
-scalar Network.Sensor.sink 	rcvdPk:count 	0
+scalar Network.Sensor.sink 	throughput 	8053.4760288465
+scalar Network.Sensor.sink 	packetPerSec 	10.066845036058
+scalar Network.Sensor.sink 	rcvdPk:count 	2
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, count"
-scalar Network.Sensor.sink 	rcvdPk:sum(packetBytes) 	0
+scalar Network.Sensor.sink 	rcvdPk:sum(packetBytes) 	200
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, sum(packetBytes)"

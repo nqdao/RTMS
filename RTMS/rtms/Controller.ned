@@ -22,10 +22,8 @@ simple Controller
 {
     @display("i=block/control");
     gates:
-        input in1 	;
-        input in2	;
-        input in3	;
+       	input in[];
         output out1 ;
-        output out2	;
-        output out3	;
+        output out2 ;
+        output out3 ;
 }

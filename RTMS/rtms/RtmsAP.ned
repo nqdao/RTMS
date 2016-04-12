@@ -15,6 +15,7 @@
 
 package rtms.rtms;
 import inet.applications.ethernet.EtherAppCli;
+import inet.linklayer.ethernet.EtherLLC;
 import inet.linklayer.ieee80211.Ieee80211Nic;
 import inet.mobility.static.StationaryMobility;
 import rtms.rtms.Controller;
@@ -31,22 +32,49 @@ module RtmsAP
         @display("i=device/accesspoint;bgb=608,408");
         *.interfaceTableModule = default("");
     gates:
-        input radioIn @directIn;
+        input radioIn[3] @directIn;
     submodules:
-        WlanNic: Ieee80211Nic {
+        wlanNic1: Ieee80211Nic {
             parameters:
                 @display("p=130,279;q=queue");
                 mgmtType = default("Ieee80211MgmtAPSimplified");
                 mgmt.encapDecap = "true";
         }
         mobility: StationaryMobility {
-            @display("p=75,120;b=5,7");
+            @display("p=31,37;b=5,7");
         }
-        cli: EtherAppCli {
-            @display("p=206,154");
+        cli1: EtherAppCli {
+            @display("p=285,91");
+        }
+        controller: Controller {
+            @display("p=285,196");
+        }
+        wlanNic2: Ieee80211Nic {
+            @display("p=285,279;q=queue");
+            mgmtType = default("Ieee80211MgmtAPSimplified");
+            mgmt.encapDecap = "true";
+            
+        }
+        wlanNic3: Ieee80211Nic {
+            @display("p=435,279;q=queue");
+            mgmtType = default("Ieee80211MgmtAPSimplified");
+            mgmt.encapDecap = "true";
+        }
+        cli2: EtherAppCli {
+            @display("p=130,91");
+        }
+        cli3: EtherAppCli {
+            @display("p=435,91");
         }
     connections allowunconnected:
-        radioIn --> { @display("m=s"); } --> WlanNic.radioIn;
-        cli.out --> WlanNic.upperLayerIn;
+        radioIn[0] --> { @display("m=s"); } --> wlanNic1.radioIn;
+        radioIn[1] --> { @display("m=s"); } --> wlanNic2.radioIn;
+        radioIn[2] --> { @display("m=s"); } --> wlanNic3.radioIn;
+        cli1.out --> controller.in++;
+        controller.out1 --> wlanNic1.upperLayerIn;
+        controller.out2 --> wlanNic2.upperLayerIn;
+        controller.out3 --> wlanNic3.upperLayerIn;
+        cli2.out --> controller.in++;
+        cli3.out --> controller.in++;
 }
 

@@ -71,4 +71,5 @@ network Network
         Sensor: ThroughputClient {
             @display("p=370,300");
         }
+    connections:
 }

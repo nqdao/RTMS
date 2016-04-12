@@ -1,15 +1,15 @@
-file 13005 1460413763                                           
+file 99890 1460484355                                           
 version 2
-run Throughput1-0-20160411-18:28:57-6456
+run Throughput1-0-20160412-14:04:20-2308
 attr configname Throughput1
-attr datetime 20160411-18:28:57
+attr datetime 20160412-14:04:20
 attr experiment Throughput1
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network Network
-attr processid 6456
+attr processid 2308
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -20,15 +20,23 @@ vector 9  Network.PremiumUser.wlan.mac.ctn[0]  state:vector  ETV
 attr interpolationmode  none
 attr source  stateChanged
 attr title  "contention state, vector"
-vector 21  Network.ap.WlanNic.mac.ctn[0]  state:vector  ETV
+vector 27  Network.ap.wlanNic1.mac.ctn[0]  state:vector  ETV
 attr interpolationmode  none
 attr source  stateChanged
 attr title  "contention state, vector"
-vector 31  Network.StandardUser.wlan.mac.ctn[0]  state:vector  ETV
+vector 36  Network.ap.wlanNic2.mac.ctn[0]  state:vector  ETV
 attr interpolationmode  none
 attr source  stateChanged
 attr title  "contention state, vector"
-vector 41  Network.Sensor.wlan.mac.ctn[0]  state:vector  ETV
+vector 45  Network.ap.wlanNic3.mac.ctn[0]  state:vector  ETV
+attr interpolationmode  none
+attr source  stateChanged
+attr title  "contention state, vector"
+vector 55  Network.StandardUser.wlan.mac.ctn[0]  state:vector  ETV
+attr interpolationmode  none
+attr source  stateChanged
+attr title  "contention state, vector"
+vector 65  Network.Sensor.wlan.mac.ctn[0]  state:vector  ETV
 attr interpolationmode  none
 attr source  stateChanged
 attr title  "contention state, vector"
@@ -40,27 +48,43 @@ vector 8  Network.PremiumUser.wlan.radio  radioChannel:vector  ETV
 attr interpolationmode  sample-hold
 attr source  radioChannelChanged
 attr title  "Radio channel, vector"
-vector 17  Network.ap.WlanNic.radio  radioMode:vector  ETV
+vector 23  Network.ap.wlanNic1.radio  radioMode:vector  ETV
 attr interpolationmode  sample-hold
 attr source  radioModeChanged
 attr title  "Radio mode, vector"
-vector 20  Network.ap.WlanNic.radio  radioChannel:vector  ETV
+vector 26  Network.ap.wlanNic1.radio  radioChannel:vector  ETV
 attr interpolationmode  sample-hold
 attr source  radioChannelChanged
 attr title  "Radio channel, vector"
-vector 27  Network.StandardUser.wlan.radio  radioMode:vector  ETV
+vector 32  Network.ap.wlanNic2.radio  radioMode:vector  ETV
 attr interpolationmode  sample-hold
 attr source  radioModeChanged
 attr title  "Radio mode, vector"
-vector 30  Network.StandardUser.wlan.radio  radioChannel:vector  ETV
+vector 35  Network.ap.wlanNic2.radio  radioChannel:vector  ETV
 attr interpolationmode  sample-hold
 attr source  radioChannelChanged
 attr title  "Radio channel, vector"
-vector 37  Network.Sensor.wlan.radio  radioMode:vector  ETV
+vector 41  Network.ap.wlanNic3.radio  radioMode:vector  ETV
 attr interpolationmode  sample-hold
 attr source  radioModeChanged
 attr title  "Radio mode, vector"
-vector 40  Network.Sensor.wlan.radio  radioChannel:vector  ETV
+vector 44  Network.ap.wlanNic3.radio  radioChannel:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, vector"
+vector 51  Network.StandardUser.wlan.radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 54  Network.StandardUser.wlan.radio  radioChannel:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, vector"
+vector 61  Network.Sensor.wlan.radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 64  Network.Sensor.wlan.radio  radioChannel:vector  ETV
 attr interpolationmode  sample-hold
 attr source  radioChannelChanged
 attr title  "Radio channel, vector"
@@ -68,39 +92,67 @@ vector 6  Network.PremiumUser.wlan.radio  receptionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, vector"
-vector 18  Network.ap.WlanNic.radio  receptionState:vector  ETV
+vector 24  Network.ap.wlanNic1.radio  receptionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, vector"
-vector 28  Network.StandardUser.wlan.radio  receptionState:vector  ETV
+vector 33  Network.ap.wlanNic2.radio  receptionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, vector"
-vector 38  Network.Sensor.wlan.radio  receptionState:vector  ETV
+vector 42  Network.ap.wlanNic3.radio  receptionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, vector"
-vector 11  Network.ap.cli  sentPk:vector(packetBytes)  ETV
+vector 52  Network.StandardUser.wlan.radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 62  Network.Sensor.wlan.radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 14  Network.ap.cli2  sentPk:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  sentPk
 attr title  "packets sent, vector(packetBytes)"
-vector 15  Network.ap.WlanNic.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+vector 30  Network.ap.wlanNic2.mac  rcvdPkFromHL:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, vector(packetBytes)"
-vector 14  Network.ap.WlanNic.mac  sentDownPk:vector(packetBytes)  ETV
+vector 29  Network.ap.wlanNic2.mac  sentDownPk:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, vector(packetBytes)"
-vector 19  Network.ap.WlanNic.radio  transmissionState:vector  ETV
+vector 34  Network.ap.wlanNic2.radio  transmissionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  transmissionStateChanged
 attr title  "Radio transmission state, vector"
-vector 26  Network.StandardUser.wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+vector 11  Network.ap.cli1  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 21  Network.ap.wlanNic1.mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 17  Network.ap.cli3  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 22  Network.ap.wlanNic1.mac  rcvdPkFromLL:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, vector(packetBytes)"
-vector 36  Network.Sensor.wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+vector 40  Network.ap.wlanNic3.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 50  Network.StandardUser.wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 60  Network.Sensor.wlan.mac  rcvdPkFromLL:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, vector(packetBytes)"
@@ -124,35 +176,98 @@ vector 7  Network.PremiumUser.wlan.radio  transmissionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  transmissionStateChanged
 attr title  "Radio transmission state, vector"
-vector 16  Network.ap.WlanNic.mac  rcvdPkFromLL:vector(packetBytes)  ETV
+vector 31  Network.ap.wlanNic2.mac  rcvdPkFromLL:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, vector(packetBytes)"
-0	5543 105 20 134 0.001182762899 0.004210288697 4 1000 1000 4000 4000000
-1	5648 105 18 132 0.001182762899 0.004210288697 4 1036 1036 4144 4293184
-2	5753 97 21 135 0.001192762899 0.004220288697 4 14 14 56 784
-4	5850 105 18 132 0.001182762899 0.004210288697 4 1036 1036 4144 4293184
-5	5955 205 0 146 0 0.004524288697 10 0 3 22 56
-6	6160 382 0 146 0 0.004524288697 17 0 3 21 45
-7	6542 374 22 146 0.001192762899 0.004524288697 16 0 2 16 24
-8	6916 9 0 0 0 0 1 0 0 0 0
-9	6925 782 0 146 0 0.004524288697 36 0 0 0 0
-11	7707 91 1 153 0.001 0.005 5 1000 1000 5000 5000000
-14	7798 118 5 157 0.001 0.005055051596 5 1036 1036 5180 5366480
-15	7916 91 3 155 0.001 0.005 5 1036 1036 5180 5366480
-16	8007 102 36 150 0.001497525798 0.004525051596 4 14 14 56 784
-17	8109 208 0 158 0 0.005055051596 11 0 3 25 65
-18	8317 394 0 158 0 0.005055051596 18 0 3 21 45
-19	8711 376 6 159 0.001 0.005055051596 18 0 2 19 29
-20	9087 10 0 0 0 0 1 0 0 0 0
-21	9097 996 0 158 0 0.005055051596 50 0 3 101 283
-26	10093 211 14 148 0.001182570589 0.004524735672 8 14 1036 4200 4293968
-27	10304 20 0 0 0 0 2 0 2 2 4
-28	10324 399 0 147 0 0.004524735672 17 1 3 33 81
-30	10723 10 0 0 0 0 1 0 0 0 0
-31	10733 816 0 147 0 0.004524735672 36 0 0 0 0
-36	11549 211 16 152 0.001182657891 0.004525132614 8 14 1036 4200 4293968
-37	11760 20 0 0 0 0 2 0 2 2 4
-38	11780 399 0 151 0 0.004525132614 17 1 3 33 81
-40	12179 10 0 0 0 0 1 0 0 0 0
-41	12189 816 0 151 0 0.004525132614 36 0 0 0 0
+vector 20  Network.ap.wlanNic1.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 25  Network.ap.wlanNic1.radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 47  Network.StandardUser.wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 46  Network.StandardUser.sink  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 48  Network.StandardUser.wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 53  Network.StandardUser.wlan.radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 57  Network.Sensor.wlan.mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 56  Network.Sensor.sink  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 58  Network.Sensor.wlan.mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 63  Network.Sensor.wlan.radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+0	9812 304 163 4130 0.011380762899 0.230448064223 11 1300 1300 14300 18590000
+1	10116 304 161 4128 0.011380762899 0.230448064223 11 1336 1336 14696 19633856
+2	10420 282 164 4131 0.011390762899 0.230458064223 11 14 14 154 2156
+4	10702 974 161 4128 0.011380762899 0.230448064223 36 14 1336 26832 32191056
+5	11676 535 0 4132 0 0.230458064223 23 0 3 55 143
+6	12211 2308 0 4132 0 0.230458064223 94 0 3 155 371
+7	14519 1059 165 4149 0.011390762899 0.230762064223 43 0 2 44 66
+8	15578 9 0 0 0 0 1 0 0 0 0
+9	15587 4688 0 4132 0 0.230458064223 192 0 0 0 0
+11	20275 4510 14 4106 0.001 0.23 230 1000 1000 230000 230000000
+14	24785 9294 1 4139 0.0005 0.2305 461 1300 1300 599300 779090000
+17	34079 837 62 4105 0.005 0.23 46 100 100 4600 460000
+20	34916 370 394 3603 0.023451051596 0.199136634348 13 136 1036 11668 11843248
+21	35286 5348 20 4115 0.001 0.23 276 136 1036 244536 247708896
+22	40634 894 154 4121 0.01138 0.230447301324 33 14 1336 15004 19638168
+23	41528 687 0 3724 0 0.207616634348 28 0 3 67 173
+24	42215 2404 0 4135 0 0.230458827122 95 0 3 151 357
+25	44619 1334 395 3724 0.023451051596 0.207616634348 52 0 2 52 78
+26	45953 10 0 0 0 0 1 0 0 0 0
+27	45963 5570 0 4121 0 0.230447301324 222 0 3 409 1001
+29	51533 334 6 3967 0.0005 0.219567301324 12 1336 1336 16032 21418752
+30	51867 9296 4 4142 0.0005 0.2305 461 1336 1336 615896 822837056
+31	61163 928 190 3958 0.011695525798 0.219217301324 34 14 1036 10940 10774264
+32	62091 619 0 4120 0 0.230447301324 26 0 3 62 160
+33	62710 2378 0 4136 0 0.230458827122 94 0 3 152 362
+34	65088 1198 7 4120 0.0005 0.230447301324 48 0 2 48 72
+35	66286 10 0 0 0 0 1 0 0 0 0
+36	66296 5408 0 3968 0 0.219567301324 216 0 3 395 941
+40	71704 1265 155 4122 0.01138 0.230447301324 46 14 1336 26972 32193016
+41	72969 20 0 0 0 0 2 0 2 2 4
+42	72989 2379 0 4137 0 0.230458827122 94 1 3 188 470
+44	75368 10 0 0 0 0 1 0 0 0 0
+45	75378 4816 0 4122 0 0.230447301324 192 0 0 0 0
+46	80194 289 519 3730 0.031931622185 0.207617204937 10 1000 1000 10000 10000000
+47	80483 289 517 3728 0.031931622185 0.207617204937 10 1036 1036 10360 10732960
+48	80772 269 524 3735 0.031941622185 0.207627204937 10 14 14 140 1960
+50	81041 1005 157 4124 0.011380570589 0.230447871913 36 14 1336 26832 32191056
+51	82046 538 0 3748 0 0.207931204937 22 0 3 52 134
+52	82584 2398 0 4134 0 0.230458511198 94 0 3 158 380
+53	84982 1036 525 3748 0.031941622185 0.207931204937 40 0 2 40 60
+54	86018 10 0 0 0 0 1 0 0 0 0
+55	86028 4876 0 4124 0 0.230447871913 192 0 0 0 0
+56	90904 56 1487 3565 0.083363325795 0.198671976457 2 100 100 200 20000
+57	90960 56 1485 3563 0.083363325795 0.198671976457 2 136 136 272 36992
+58	91016 54 1490 3568 0.083373325795 0.198681976457 2 14 14 28 392
+60	91070 1217 159 4126 0.011380657891 0.230447959215 44 14 1336 26944 32192624
+61	92287 124 0 3582 0 0.198985976457 6 0 3 12 30
+62	92411 2391 0 4138 0 0.23045890814 94 0 3 182 452
+63	94802 208 1491 3582 0.083373325795 0.198985976457 8 0 2 8 12
+64	95010 10 0 0 0 0 1 0 0 0 0
+65	95020 4870 0 4126 0 0.230447959215 192 0 0 0 0

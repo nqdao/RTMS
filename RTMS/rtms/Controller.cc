@@ -17,12 +17,44 @@
 
 Define_Module(Controller);
 
+using namespace inet;
+
+namespace controller {
+    const char* prem_ip = "20:00:00:00:00:00";
+    const char* std_ip = "30:00:00:00:00:00";
+    const char* sensor_ip = "40:00:00:00:00:00";
+}
+
+using namespace controller;
+
 void Controller::initialize()
 {
     // TODO - Generated method body
+    Controller::prem_addr = MACAddress(prem_ip);
+    Controller::std_addr = MACAddress(std_ip);
+    Controller::sensor_addr = MACAddress(sensor_ip);
 }
 
 void Controller::handleMessage(cMessage *msg)
 {
     // TODO - Generated method body
+    if (msg->isPacket()) {
+        EtherAppReq *req = check_and_cast<EtherAppReq *>(msg);
+        Ieee802Ctrl *ctrl = check_and_cast<Ieee802Ctrl *>(req->getControlInfo());
+        MACAddress destAddr = ctrl->getDest();
+        if (destAddr.compareTo(Controller::prem_addr)) {
+            EV << "Message arrived to prem addr, sending to NIC \n";
+            send(msg, "out1");
+        } else if (destAddr.compareTo(Controller::std_addr)) {
+            EV << "Message arrived to std addr, sending to NIC \n";
+            send(msg, "out2");
+        } else if (destAddr.compareTo(Controller::sensor_addr)) {
+            EV << "Message arrived to sensor addr, sending to NIC \n";
+            send(msg, "out3");
+        } else {
+            EV << "Message is not for any users, deleting \n";
+            delete msg;
+        }
+
+    }
 }
